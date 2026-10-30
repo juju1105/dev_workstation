@@ -1,0 +1,14 @@
+
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8082:80"
+    environment:
+      - APP_ENV=dev
+      - APP_NAME=my-web
+
+  ubuntu:
+    image: ubuntu:latest
+    command: ["sh", "-c", "while true; do sleep 3600; done"]
+
