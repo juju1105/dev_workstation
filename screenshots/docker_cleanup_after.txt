@@ -1,0 +1,12 @@
+=== Images After Cleanup ===
+IMAGE                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+my-web-image:latest   bd7d1f4a3d2a       94.4MB         26.3MB        
+nginx:alpine          785835ea65db       95.3MB         27.2MB   U    
+ubuntu:latest         6a06111c3b0a        179MB         44.9MB   U    
+=== Containers After Cleanup ===
+CONTAINER ID   IMAGE           COMMAND                   CREATED      STATUS          PORTS                                     NAMES
+1188a19263d6   nginx:alpine    "/docker-entrypoint.…"   8 days ago   Up 18 minutes   0.0.0.0:8082->80/tcp, [::]:8082->80/tcp   dev-workstation-web-1
+8467431165e7   ubuntu:latest   "sh -c 'while true; …"   8 days ago   Up 18 minutes                                             dev-workstation-ubuntu-1
+=== Volumes After Cleanup ===
+DRIVER    VOLUME NAME
+local     my-web-data
