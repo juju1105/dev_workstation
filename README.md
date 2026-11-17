@@ -212,7 +212,41 @@ docker volume ls
 
 **실습 결과:** `my-web-data` 볼륨이 존재하는 것을 확인하였다. 볼륨은 컨테이너와 별도로 관리되므로 컨테이너 삭제와 구분하여 관리하였다.
 
-## 9. Git 및 GitHub 연동
+## 9. Docker Compose를 이용한 컨테이너 통합 관리(보너스 과제)
+
+Docker Compose는 여러 개의 Docker 컨테이너를 하나의 YAML 설정 파일로 정의하고 관리할 수 있는 도구이다.
+
+본 프로젝트에서는 `compose.yaml` 파일을 작성하여 NGINX 웹 서버와 Ubuntu 컨테이너를 함께 관리하도록 설정하였다.
+
+### 주요 설정
+
+- `services`: 실행할 서비스 정의
+- `image`: 사용할 Docker 이미지 지정
+- `ports`: 호스트와 컨테이너의 포트 연결
+- `environment`: 컨테이너에 전달할 환경변수 설정
+- `command`: 컨테이너 실행 시 수행할 명령어 지정
+
+### 주요 명령어
+
+\```bash
+docker compose up -d
+docker compose ps
+docker compose logs
+docker compose stop
+docker compose down
+\```
+
+- `up -d`: 정의된 서비스 실행
+- `ps`: 서비스 실행 상태 확인
+- `logs`: 서비스 실행 로그 확인
+- `stop`: 실행 중인 서비스 중지
+- `down`: 컨테이너 및 기본 네트워크 정리
+
+### 실습 결과
+
+하나의 `compose.yaml` 파일에서 NGINX와 Ubuntu 서비스를 정의하고 Docker Compose 명령어를 통해 여러 컨테이너를 통합 관리하는 방법을 익혔다.
+
+## 10. Git 및 GitHub 연동
 
 Git을 이용하여 프로젝트의 변경 이력을 관리하고 GitHub 원격 저장소에 업로드하였다.
 
@@ -237,7 +271,7 @@ https://github.com/juju1105/dev_workstation
 
 **실습 결과:** Git을 이용해 작업 이력을 관리하고 GitHub에 프로젝트 파일을 업로드하였다.
 
-## 10. 오류 해결 과정
+## 11. 오류 해결 과정
 
 ### 문제 1. GitHub 저장소 연결 오류
 
@@ -298,7 +332,7 @@ OrbStack이 실행되지 않아 Docker 엔진에 연결할 수 없었다.
 **결과:**  
 OrbStack을 실행한 후 Docker 명령어가 정상적으로 작동하였다.
 
-## 11. 최종 실습 결과 및 느낀 점
+## 12. 최종 실습 결과 및 느낀 점
 
 이번 프로젝트를 통해 개발 환경을 구성하는 데 필요한 기본적인 명령어와 도구의 사용 방법을 익힐 수 있었다.
 
@@ -310,7 +344,7 @@ OrbStack을 실행한 후 Docker 명령어가 정상적으로 작동하였다.
 
 단순히 명령어를 실행하는 것에서 그치지 않고, 실행 결과를 확인하고 발생한 오류를 해결하는 과정을 통해 개발 환경 관리의 기본적인 흐름을 경험할 수 있었다.
 
-## 12. 실습 스크린샷
+## 13. 실습 스크린샷
 
 각 실습 과정에서 실행한 명령어와 결과를 `screenshots` 폴더에 저장하였다.
 
